@@ -1,12 +1,12 @@
 {
 	"id": "jenkins",
 	"instances": 1,
-	"mem": 1500,
+	"mem": 512,
 	"env": {
 		"JAVA_OPTS": "-Xmx300m"
    },
    "uris": [
-      "https://s3.amazonaws.com/downloads.mesosphere.io/jenkins/test/0.6.0/jenkins-on-mesos.tgz"
+      "https://storage.bhs-1.runabove.io/v1/AUTH_1f07f493f85743899eee1519daab6a6c/artefacts/jenkins-on-mesos.tgz"
    ],
    "cmd": "cd jenkins-on-mesos && export JENKINS_HOME=$(pwd) && export JENKINS_URL=http://$MESOS_HOSTNAME:$PORT0 && java $JAVA_OPTS -jar jenkins.war --httpPort=$PORT0",
    "healthChecks": [
